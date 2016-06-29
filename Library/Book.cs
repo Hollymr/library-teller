@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace Library
 {
-    class Book
+    class Book : Media
     {
+        public override void PrintMediaDetails()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override DateTime ReturnDueDate()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

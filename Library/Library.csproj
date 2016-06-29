@@ -43,8 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Book.cs" />
+    <Compile Include="DVD.cs" />
     <Compile Include="FileIO.cs" />
     <Compile Include="IFileInterface.cs" />
+    <Compile Include="Magazine.cs" />
     <Compile Include="Media.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
