@@ -30,12 +30,12 @@ namespace Library
                 //match each needed component
                 //populae with your regex to match the format
 
-                Match match = Regex.Match(s, @"");
+                Match match = Regex.Match(s, @"Type\: ([a-zA-z]+),Title\: (.*),+Length\: ([0-9a-zA-Z a-z]+)");
                 if (match.Success)
                 {
                     //populate each component with the values from your capture groups
                     string type = match.Groups[1].ToString();
-                    string title = match.Groups[2].ToString();
+                    string title = match.Groups[2].ToString(); 
                     string length = match.Groups[3].ToString();
 
                     //using the components we got figure out which type of object we should create and insert
