@@ -41,12 +41,22 @@ namespace Library
                     //using the components we got figure out which type of object we should create and insert
                     if (type.Equals("Book"))
                     {
-                        //create a book object
-                        //populate the book object with a title and length
-                        //then add the newly created book to rentedMedia
+                        Book book = new Book();
+                        book.Title = "Harry Potter and The Deathly Hallows";
+                        book.Length = "784 pages";                        
+                    }                   
+                    if (type.Equals("DVD"))
+                    {
+                        DVD dvd = new DVD();
+                        dvd.Title = "Harry Potter and the Order of the Pheonix";
+                        dvd.Length = "2h 22m";
                     }
-                    //complete for the DVD and Magazine media types
-                        //implement
+                    if (type.Equals("Magazine"))
+                    {
+                        Magazine magazine = new Magazine();
+                        magazine.Title = "Yoga Journal";
+                        magazine.Length = "50 pages";
+                    }
                 }
             }
 
