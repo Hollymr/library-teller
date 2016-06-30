@@ -10,7 +10,7 @@ namespace Library
     {
         public virtual string Title { get;  set; }
         public virtual string Length { get;  set; }
-        public int RentalLength { get; set; }
+        public abstract int RentalLength { get; set; }
         protected DateTime RentedDate { get;  set; }
     
         
