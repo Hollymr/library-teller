@@ -43,19 +43,26 @@ namespace Library
                     {
                         Book book = new Book();
                         book.Title = "Harry Potter and The Deathly Hallows";
-                        book.Length = "784 pages";                        
+                        book.Length = "784 pages";
+
+                        rentedMedia.Add(book);                      
                     }                   
                     if (type.Equals("DVD"))
                     {
                         DVD dvd = new DVD();
                         dvd.Title = "Harry Potter and the Order of the Pheonix";
                         dvd.Length = "2h 22m";
+
+                        rentedMedia.Add(dvd);
                     }
                     if (type.Equals("Magazine"))
                     {
                         Magazine magazine = new Magazine();
                         magazine.Title = "Yoga Journal";
                         magazine.Length = "50 pages";
+
+                        rentedMedia.Add(magazine);
+                        
                     }
                 }
             }
@@ -63,8 +70,8 @@ namespace Library
             //for each media item we have in the list print the details for each
             foreach (Media mediaItem in rentedMedia)
             {
-                //for each mediaItem call PrintMediaDetails()
-                    //implement
+                mediaItem.PrintMediaDetails();                
+               
             }
 
             //halt the program so we can read the output
