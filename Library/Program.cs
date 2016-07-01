@@ -39,25 +39,28 @@ namespace Library
                     if (type.Equals("Book"))
                     {
                         Book book = new Book();
-                        book.Title = "Harry Potter and The Deathly Hallows";
-                        book.Length = "784 pages";
-
+                        //book.Title = "Harry Potter and The Deathly Hallows";
+                        //book.Length = "784 pages";
+                        book.Title = title;
+                        book.Length = length;
                         rentedMedia.Add(book);                      
                     }                   
                     if (type.Equals("DVD"))
                     {
                         DVD dvd = new DVD();
-                        dvd.Title = "Harry Potter and the Order of the Pheonix";
-                        dvd.Length = "2h 22m";
-
+                        //dvd.Title = "Harry Potter and the Order of the Pheonix";
+                        //dvd.Length = "2h 22m";
+                        dvd.Title = title;
+                        dvd.Length = length;
                         rentedMedia.Add(dvd);
                     }
                     if (type.Equals("Magazine"))
                     {
                         Magazine magazine = new Magazine();
-                        magazine.Title = "Yoga Journal";
-                        magazine.Length = "50 pages";
-
+                        //magazine.Title = "Yoga Journal";
+                        //magazine.Length = "50 pages";
+                        magazine.Title = title;
+                        magazine.Length = length;
                         rentedMedia.Add(magazine);
                         
                     }

@@ -16,7 +16,8 @@ namespace Library
         
         public Media()
         {
-            RentedDate = DateTime.Today;
+            RentedDate = DateTime.Today;// DateTime.Today = just the date 12am
+            // DateTime.Now = pulls todays date and time!
         }
         
         public abstract void PrintMediaDetails();
