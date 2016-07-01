@@ -20,7 +20,7 @@ namespace Library
                 //check to see whether the file exists
                 if (!File.Exists(path))
                 {
-                    throw new Exception ("File does not exist!");
+                    throw new FileNotFoundException("File not found", path);
                 }
 
                 //initialize the empty string we'll be using for each line
@@ -29,22 +29,20 @@ namespace Library
                 
                 using (StreamReader reader = new StreamReader(path))
                 {
-                    line = reader.ReadLine();
-                }
-                Console.WriteLine(line);
-
-                int counter = 0;
-                // Read file display line by line
-                System.IO.StreamReader file =
-                new System.IO.StreamReader(@"C:\Users\WeCanCodeIT\Documents\Visual Studio 2015\Projects\library-teller\Library\Media.txt");
-
-                while ((line = file.ReadLine()) !=null)
+                    //Console.WriteLine(line);
+                    // Read file display line by line
+                    //System.IO.StreamReader file =
+                    //new System.IO.StreamReader(@"C:\Users\WeCanCodeIT\Documents\Visual Studio 2015\Projects\library-teller\Library\Media.txt");
+                    //while ((line = file.ReadLine()) !=null)
+                    //int count = 0;
+                    line = reader.ReadLine();// gets the first line
+                    while (line != null)
                     {
-                        Console.WriteLine(line);
-                        counter++;
+                        mediaFile.Add(line);
+                        line = reader.ReadLine();//getting the next line!!!!! 
                     }
-                
-                    file.Close();
+                                   
+                }
             }
             catch (FileNotFoundException)
             {
@@ -52,7 +50,7 @@ namespace Library
             }
             catch (Exception e)
             {
-                Console.WriteLine("Unknown error occured.");
+                Console.WriteLine(e.Message);
             }
 
             return mediaFile;

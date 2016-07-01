@@ -10,16 +10,13 @@ namespace Library
     class Program
     {
         static void Main(string[] args)
-        {
-            //set the rental dates for each type via a static field
-                //implement
+        {           
 
             //create a list a propulate it with the date in our file
             FileIO getFile = new FileIO();
 
-            //populate mediaToRent with the values returned from getFile instead of an empty list e.g. "new List<string>();"
-            //implement
-            List<string> mediaToRent = new List<string>();
+            //populate mediaToRent with the values returned from getFile instead of an empty list e.g. "new List<string>();"           
+            List<string> mediaToRent = getFile.ReturnMediaFile(@"..\..\Media.txt");
             
             //create a new list for us to use to store our media objects to rent
             List<Media> rentedMedia = new List<Media>();
